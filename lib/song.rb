@@ -17,6 +17,7 @@ class Song
     new_song = Song.new(file.split(" - ")[1])
     binding.pry
     new_song.artist = Artist.find_or_create_by_name(file.split(" - ")[0])
+    binding.pry
   end
 
   def self.all
