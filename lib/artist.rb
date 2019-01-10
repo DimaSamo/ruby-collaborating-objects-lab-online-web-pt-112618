@@ -9,7 +9,7 @@ class Artist
   def self.find_or_create_by_name(name)
     @@all.find do |artist|
       artist.name == name
-    end
+    end or Artist.new(name)
   end
 
   @@all = []
